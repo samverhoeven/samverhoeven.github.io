@@ -2,10 +2,34 @@
 <html>
     <head>
         <title>Sam Verhoeven</title>
+        <meta charset="utf-8">
         <meta charset="windows-1252">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/portfolio.css">
+        <script src="JS/portfolio.js"></script>
+        <script>
+            window.addEventListener("load", windowLoad);
+        </script>
     </head>
     <body>
-        <div><p>Portfolio Sam Verhoeven</p></div>
+        <header>
+            <div class="container" id="menu">
+                <ul>
+                    <li><a href="#" id="infoLink">Info</a></li>
+                    <li><a href="#" id="profielLink">Profiel</a></li>
+                    <li><a href="#" id="werkLink">Werk</a></li>
+                </ul>
+            </div>
+        </header>
+        <div class="container" id="info">
+            <p>Info Sam Verhoeven</p>
+        </div>
+        <div class="container" id="profiel">
+            <p>Profiel Sam Verhoeven</p>
+        </div>
+        <div class="container" id="werk">
+            <p>Werk Sam Verhoeven</p>
+        </div>
     </body>
 </html>
