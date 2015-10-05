@@ -1,4 +1,1 @@
-;www.verhoevensam.be                     IN      A
-# www.verhoevensam.be.              3592    IN      CNAME   samverhoeven.github.io.
-# samverhoeven.github.io.           43192   IN      CNAME   github.map.fastly.net.
-# github.map.fastly.net.        22      IN      A       159.253.0.110
+www.verhoevensam.be
