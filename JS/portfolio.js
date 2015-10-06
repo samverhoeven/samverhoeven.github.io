@@ -1,5 +1,4 @@
 function windowLoad() {
-    //var aLinks = [];
     var eMenu = document.querySelectorAll("#menu ul li a");
     
     for (i = 0; i < eMenu.length; i++) {
