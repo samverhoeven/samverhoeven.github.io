@@ -56,10 +56,14 @@ function findPos(elem) {
 function linkExpand(elem){
     var eParent = elem.parentNode;
     eParent.style.background = "#4863A0";
+    var eSibling = elem.nextSibling;
+    eSibling.style.display = "block";
 }
 
 function linkDeflate(elem){
     var eParent = elem.parentNode;
     eParent.style.background = "black";
+    var eSibling = elem.nextSibling;
+    eSibling.style.display = "none";
 }
 
