@@ -2,11 +2,21 @@ function windowLoad() {
     var eMenu = document.querySelectorAll("#menu ul li a");
     var eTop = document.querySelectorAll(".top");
     var eIntro = document.getElementById("menuLink");
-
+    
     for (i = 0; i < eMenu.length; i++) {
         eMenu[i].addEventListener("click", function (e) {
             e.preventDefault();
             scrollTo(this);
+        });
+    }
+    for (i = 0; i < eMenu.length; i++) {
+        eMenu[i].addEventListener("mouseover", function (e) {
+            //linkHoverOn(this);
+        });
+    }
+    for (i = 0; i < eMenu.length; i++) {
+        eMenu[i].addEventListener("mouseout", function (e) {
+            //linkHoverOff(this);
         });
     }
     for (i = 0; i < eTop.length; i++) {
@@ -16,6 +26,7 @@ function windowLoad() {
             console.log(this);
         });
     }
+    
     eIntro.addEventListener("click", function (e) {
         e.preventDefault();
         scrollTo(this);
@@ -79,3 +90,12 @@ function linkDeflate(elem) {
      eSibling.className = sClass;*/
 }
 
+function linkHoverOn(elem){
+    var eParent = elem.parentNode;
+    eParent.style.background = "black";
+}
+
+function linkHoverOff(elem){
+    var eParent = elem.parentNode;
+    eParent.style.background = "#4863A0";
+}
