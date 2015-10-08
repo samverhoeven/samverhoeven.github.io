@@ -76,6 +76,7 @@ p{
     transform: rotate(90deg);
     width: 50px;
     opacity: 0;
+    margin-top: 25px;
 
     -webkit-transition: 2s ease; /* Safari, Chrome and Opera > 12.1 */
     -moz-transition: 2s ease; /* Firefox < 16 */
