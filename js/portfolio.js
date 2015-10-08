@@ -21,11 +21,11 @@ function windowLoad() {
         scrollTo(this);
         console.log(this);
     });
-    eIntro.addEventListener("mouseover",function(e){
+    eIntro.addEventListener("mouseover", function (e) {
         e.preventDefault();
         linkExpand(this);
     });
-    eIntro.addEventListener("mouseout",function(e){
+    eIntro.addEventListener("mouseout", function (e) {
         e.preventDefault();
         linkDeflate(this);
     });
@@ -53,17 +53,29 @@ function findPos(elem) {
     }
 }
 
-function linkExpand(elem){
+function linkExpand(elem) {
     var eParent = elem.parentNode;
     eParent.style.background = "#4863A0";
     var eSibling = elem.nextSibling;
-    eSibling.style.display = "block";
+    eSibling.style.opacity = 1;
+
+    //transitie via class verandering
+    /*var sClass = eSibling.className;
+     sClass = sClass.replace("fadeout","");
+     sClass += " fadein";
+     eSibling.className = sClass;*/
 }
 
-function linkDeflate(elem){
+function linkDeflate(elem) {
     var eParent = elem.parentNode;
     eParent.style.background = "black";
     var eSibling = elem.nextSibling;
-    eSibling.style.display = "none";
+    eSibling.style.opacity = 0;
+
+    //transitie via class verandering
+    /*var sClass = eSibling.className; 
+     sClass = sClass.replace("fadein","");
+     sClass += " fadeout";
+     eSibling.className = sClass;*/
 }
 
