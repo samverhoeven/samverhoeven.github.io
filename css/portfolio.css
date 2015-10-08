@@ -5,12 +5,7 @@ body{
     color: #666;
 }
 
-header{
-    background: #4863A0;
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-}
+
 
 a{
     text-decoration: none;
@@ -124,6 +119,13 @@ h2{
 }*/
 
 /*--menu--*/
+header{
+    background: #4863A0;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+}
+
 #menu ul{
     list-style-type: none;
     padding: 0;
@@ -173,4 +175,23 @@ h2{
     float: right;
     color: #4863A0;
 }
+
+/*--footer--*/
+footer{
+    background-color: #4863A0;
+    color: white;
+    padding: 10px 0;
+    
+    -webkit-box-shadow: 0px -2px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -2px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -2px 2px 0px rgba(0,0,0,0.75);
+}
+
+#linkedin{
+}
+
+#creator{
+    float: right;
+}
+
 
