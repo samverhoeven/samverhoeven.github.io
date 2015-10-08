@@ -57,7 +57,7 @@ function findPos(elem) {
 
 function linkExpand(elem) {
     var eParent = elem.parentNode;
-    eParent.style.background = "#4863A0";
+    //eParent.style.background = "#4863A0";
     var eSibling = elem.nextSibling;
     eSibling.style.opacity = 1;
     eSibling.style.marginTop = "25px";
@@ -72,7 +72,7 @@ function linkExpand(elem) {
 
 function linkDeflate(elem) {
     var eParent = elem.parentNode;
-    eParent.style.background = "black";
+    //eParent.style.background = "rgba(255,0,0,0)";
     var eSibling = elem.nextSibling;
     eSibling.style.opacity = 0;
     eSibling.style.marginTop = "-35px";
