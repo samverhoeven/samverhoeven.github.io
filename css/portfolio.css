@@ -176,6 +176,15 @@ header{
     color: #4863A0;
 }
 
+.formarea{
+    clear: left;
+    margin: 10px 0;
+}
+
+#bericht{
+    line-height: 2em;
+}
+
 /*--footer--*/
 footer{
     background-color: #4863A0;
