@@ -9,16 +9,7 @@ function windowLoad() {
             scrollTo(this);
         });
     }
-    for (i = 0; i < eMenu.length; i++) {
-        eMenu[i].addEventListener("mouseover", function (e) {
-            //linkHoverOn(this);
-        });
-    }
-    for (i = 0; i < eMenu.length; i++) {
-        eMenu[i].addEventListener("mouseout", function (e) {
-            //linkHoverOff(this);
-        });
-    }
+    
     for (i = 0; i < eTop.length; i++) {
         eTop[i].addEventListener("click", function (e) {
             e.preventDefault();
@@ -69,6 +60,8 @@ function linkExpand(elem) {
     eParent.style.background = "#4863A0";
     var eSibling = elem.nextSibling;
     eSibling.style.opacity = 1;
+    eSibling.style.marginTop = "25px";
+   
 
     //transitie via class verandering
     /*var sClass = eSibling.className;
@@ -82,20 +75,11 @@ function linkDeflate(elem) {
     eParent.style.background = "black";
     var eSibling = elem.nextSibling;
     eSibling.style.opacity = 0;
+    eSibling.style.marginTop = "-35px";
 
     //transitie via class verandering
     /*var sClass = eSibling.className; 
      sClass = sClass.replace("fadein","");
      sClass += " fadeout";
      eSibling.className = sClass;*/
-}
-
-function linkHoverOn(elem){
-    var eParent = elem.parentNode;
-    eParent.style.background = "black";
-}
-
-function linkHoverOff(elem){
-    var eParent = elem.parentNode;
-    eParent.style.background = "#4863A0";
 }
