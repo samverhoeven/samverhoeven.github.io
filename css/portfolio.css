@@ -5,8 +5,6 @@ body{
     color: #666;
 }
 
-
-
 a{
     text-decoration: none;
     color: white;
@@ -50,6 +48,11 @@ h2{
     filter: blur(2px);
 }
 
+#intro_nav{
+    position: absolute;
+    top: 0;
+}
+
 #intro_wrap{
     color: white;
     height: 100vh;
@@ -91,6 +94,10 @@ h2{
     vertical-align: -144px;
     font-size: 2em;
     z-index: 10;
+}
+
+#menuLink:hover, #menuLink:focus{
+    text-decoration: none;
 }
 
 #pijl_onder{
@@ -174,11 +181,6 @@ header{
     font-size: 1.5em;
     float: right;
     color: #4863A0;
-}
-
-.formarea{
-    clear: left;
-    margin: 10px 0;
 }
 
 #bericht{

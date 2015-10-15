@@ -4,6 +4,7 @@
         <title>Sam Verhoeven</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/portfolio.css">
         <script src="js/portfolio.js"></script>
@@ -21,6 +22,17 @@
                     </div>
                 </div>
             </div>
+            <!--<div class="dropdown" id="intro_nav">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Dropdown
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                    <li><a href="#" id="infoLink">Info</a></li>
+                    <li><a href="#" id="profielLink">Profiel</a></li>
+                    <li><a href="#" id="projectenLink">Projecten</a></li>
+                </ul>
+            </div>-->
         </div>
         <header>
             <div class="container" id="menu">
@@ -49,18 +61,24 @@
         <div class="container" id="contact">
             <a class="top" href="#">&#8679;</a>
             <h2>Contact</h2>
-            <form action="http://formspree.io/sam_verhoeven3@hotmail.com" method="POST">
-                <div class="formarea">
-                <input type="text" name="name" placeholder="uw naam">
-                <input type="email" name="_replyto" placeholder="uw emailadres">
+            <form class="form-horizontal" action="http://formspree.io/sam_verhoeven3@hotmail.com" method="POST">
+                <div class="form-group col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input class="form-control" type="text" name="name" placeholder="uw naam">
+                        </div>
+                        <div class="col-sm-6">
+                            <input class="form-control" type="email" name="_replyto" placeholder="uw emailadres">
+                        </div>
+                    </div>
                 </div>
-                <div class="formarea">
-                <textarea name="message" cols="40" rows="5" maxlength="300" placeholder="hier uw bericht"></textarea>
+                <div class="form-group col-sm-12">
+                    <textarea class="form-control" name="message" cols="40" rows="5" maxlength="300" placeholder="hier uw bericht"></textarea>
                 </div>
-                <div class="formarea">
-                <input type="hidden" name="_next" value="#contact" />
-                <input type="submit" name="Verzenden" value="verzenden">
-                <input type="reset" value="verwijderen">
+                <div class="form-group col-sm-12">
+                    <input type="hidden" name="_next" value="#contact" />
+                    <input class="btn btn-default" type="submit" name="Verzenden" value="verzenden">
+                    <input class="btn btn-default" type="reset" value="verwijderen">
                 </div>
             </form>
         </div>
