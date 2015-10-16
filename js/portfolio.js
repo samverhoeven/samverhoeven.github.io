@@ -1,34 +1,38 @@
 function windowLoad() {
-    var eMenu = document.querySelectorAll("ul li a");
-    var eTop = document.querySelectorAll(".top");
-    var eIntro = document.getElementsByClassName("menuLink");
+    document.createElement("footer");
     
-    for (i = 0; i < eMenu.length; i++) {
-        eMenu[i].addEventListener("click", function (e) {
+    var eMenu = document.querySelectorAll(".csstransforms ul li a");
+    var eTop = document.querySelectorAll(".csstransforms .top");
+    var eIntro = document.querySelectorAll(".csstransforms .menuLink");
+
+    if (window.addEventListener) {
+        for (i = 0; i < eMenu.length; i++) {
+            eMenu[i].addEventListener("click", function (e) {
+                e.preventDefault();
+                scrollTo(this);
+            });
+        }
+
+        for (i = 0; i < eTop.length; i++) {
+            eTop[i].addEventListener("click", function (e) {
+                e.preventDefault();
+                scrollTo(this);
+            });
+        }
+
+        eIntro[0].addEventListener("click", function (e) {
             e.preventDefault();
             scrollTo(this);
         });
-    }
-    
-    for (i = 0; i < eTop.length; i++) {
-        eTop[i].addEventListener("click", function (e) {
+        eIntro[0].addEventListener("mouseover", function (e) {
             e.preventDefault();
-            scrollTo(this);
+            linkExpand(this);
+        });
+        eIntro[0].addEventListener("mouseout", function (e) {
+            e.preventDefault();
+            linkDeflate(this);
         });
     }
-    
-    eIntro[0].addEventListener("click", function (e) {
-        e.preventDefault();
-        scrollTo(this);
-    });
-    eIntro[0].addEventListener("mouseover", function (e) {
-        e.preventDefault();
-        linkExpand(this);
-    });
-    eIntro[0].addEventListener("mouseout", function (e) {
-        e.preventDefault();
-        linkDeflate(this);
-    });
 }
 
 function scrollTo(elem) {
@@ -55,10 +59,11 @@ function findPos(elem) {
 function linkExpand(elem) {
     var eParent = elem.parentNode;
     //eParent.style.background = "#4863A0";
+    console.log(elem);
     var eSibling = elem.nextSibling;
     eSibling.style.opacity = 1;
     eSibling.style.marginTop = "25px";
-   
+
 
     //transitie via class verandering
     /*var sClass = eSibling.className;
