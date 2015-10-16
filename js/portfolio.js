@@ -1,6 +1,4 @@
 function windowLoad() {
-    document.createElement("footer");
-    
     var eMenu = document.querySelectorAll(".csstransforms ul li a");
     var eTop = document.querySelectorAll(".csstransforms .top");
     var eIntro = document.querySelectorAll(".csstransforms .menuLink");
@@ -59,7 +57,6 @@ function findPos(elem) {
 function linkExpand(elem) {
     var eParent = elem.parentNode;
     //eParent.style.background = "#4863A0";
-    console.log(elem);
     var eSibling = elem.nextSibling;
     eSibling.style.opacity = 1;
     eSibling.style.marginTop = "25px";
