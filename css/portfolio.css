@@ -1,5 +1,10 @@
 @charset "utf-8";
 /*--algemeen--*/
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
 body{
     background-color: #EEEEEE;
     color: #666;
@@ -31,11 +36,13 @@ h2{
 #intro_totaal{
     position: relative;
     background-color: black;
+    height: 100%;
+    width: 100%;
 }
 #intro_back{
     background: url("../img/code_web.jpg") no-repeat center center fixed;
     opacity: 0.6;
-    height: 100vh;
+    height: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -68,7 +75,7 @@ h2{
 
 #intro_wrap{
     color: white;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     top: 0;
     position: absolute;
@@ -111,17 +118,21 @@ h2{
 
 .menuLink:hover, .menuLink:focus{
     text-decoration: none;
+    color: white;
 }
 
 #pijl_onder{
     margin: 0 auto;
     font-size: 2.5em;
-    transform: rotate(90deg);
     width: 0px;
     opacity: 0;
     margin-top: -35px;
     z-index: 0;
 
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    
     -webkit-transition: 2s ease; /* Safari, Chrome and Opera > 12.1 */
     -moz-transition: 2s ease; /* Firefox < 16 */
     -ms-transition: 2s ease; /* Internet Explorer */
@@ -194,6 +205,10 @@ header{
     font-size: 1.5em;
     float: right;
     color: #4863A0;
+}
+
+.container .top:hover, .container .top:focus{
+    text-decoration: none;
 }
 
 #bericht{
