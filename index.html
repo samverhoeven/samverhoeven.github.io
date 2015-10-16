@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/portfolio.css">
+        <script src="libraries/jquery/jquery-1.11.3.min.js"></script>
+        <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
         <script src="js/portfolio.js"></script>
         <script>
             window.addEventListener("load", windowLoad);
@@ -18,28 +20,30 @@
             <div id="intro_wrap">
                 <div id="intro">
                     <div id="menuLink_wrap">
-                        <a id="menuLink" href="#">Sam Verhoeven</a><p id="pijl_onder">&#10148;</p>
+                        <a class="menuLink" href="#">Sam Verhoeven</a><p id="pijl_onder">&#10148;</p>
                     </div>
                 </div>
             </div>
-            <!--<div class="dropdown" id="intro_nav">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    Dropdown
-                    <span class="glyphicon glyphicon-menu-hamburger"></span>
-                </button>
+            <div class="dropdown" id="intro_nav">
+                <a href="#" class="dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <span id="dropdownIcon" class="glyphicon glyphicon-menu-hamburger"></span>
+                </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                    <li><a href="#" id="infoLink">Info</a></li>
-                    <li><a href="#" id="profielLink">Profiel</a></li>
-                    <li><a href="#" id="projectenLink">Projecten</a></li>
+                    <li><a href="#" class="infoLink">Info</a></li>
+                    <li><a href="#" class="profielLink">Profiel</a></li>
+                    <li><a href="#" class="projectenLink">Projecten</a></li>
+                    <li><a href="#" class="contactLink">Contact</a></li>
                 </ul>
-            </div>-->
+            </div>
         </div>
         <header>
             <div class="container" id="menu">
                 <ul>
-                    <li><a href="#" id="infoLink">Info</a></li><li>
-                        <a href="#" id="profielLink">Profiel</a></li><li>
-                        <a href="#" id="projectenLink">Projecten</a></li>
+                    <!--alles aan elkaar door display: inline-block-->
+                    <li><a href="#" class="infoLink">Info</a></li><li>
+                        <a href="#" class="profielLink">Profiel</a></li><li>
+                        <a href="#" class="projectenLink">Projecten</a></li><li>
+                        <a href="#" class="contactLink">Contact</a></li>
                 </ul>
             </div>
         </header>

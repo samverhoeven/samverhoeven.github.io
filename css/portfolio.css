@@ -51,6 +51,19 @@ h2{
 #intro_nav{
     position: absolute;
     top: 0;
+    padding: 10px;
+}
+
+#dropdownIcon{
+    color: white;
+    font-size: 2em;
+}
+
+.dropdown-menu{
+    background-color: rgba(0,0,0,0.5);
+}
+.dropdown-menu li a{
+    color: white;
 }
 
 #intro_wrap{
@@ -90,13 +103,13 @@ h2{
     transition: 2s ease;
 }
 
-#menuLink{
+.menuLink{
     vertical-align: -144px;
     font-size: 2em;
     z-index: 10;
 }
 
-#menuLink:hover, #menuLink:focus{
+.menuLink:hover, .menuLink:focus{
     text-decoration: none;
 }
 

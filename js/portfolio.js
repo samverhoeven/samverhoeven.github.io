@@ -1,7 +1,7 @@
 function windowLoad() {
-    var eMenu = document.querySelectorAll("#menu ul li a");
+    var eMenu = document.querySelectorAll("ul li a");
     var eTop = document.querySelectorAll(".top");
-    var eIntro = document.getElementById("menuLink");
+    var eIntro = document.getElementsByClassName("menuLink");
     
     for (i = 0; i < eMenu.length; i++) {
         eMenu[i].addEventListener("click", function (e) {
@@ -14,20 +14,18 @@ function windowLoad() {
         eTop[i].addEventListener("click", function (e) {
             e.preventDefault();
             scrollTo(this);
-            console.log(this);
         });
     }
     
-    eIntro.addEventListener("click", function (e) {
+    eIntro[0].addEventListener("click", function (e) {
         e.preventDefault();
         scrollTo(this);
-        console.log(this);
     });
-    eIntro.addEventListener("mouseover", function (e) {
+    eIntro[0].addEventListener("mouseover", function (e) {
         e.preventDefault();
         linkExpand(this);
     });
-    eIntro.addEventListener("mouseout", function (e) {
+    eIntro[0].addEventListener("mouseout", function (e) {
         e.preventDefault();
         linkDeflate(this);
     });
@@ -35,12 +33,11 @@ function windowLoad() {
 
 function scrollTo(elem) {
     if (elem.className === "top") {
-        console.log(elem.className);
         window.scroll(0, 0);
     } else {
-        var sId = elem.id;
-        sId = sId.replace("Link", "");
-        var eContainer = document.getElementById(sId);
+        var sClass = elem.className;
+        sClass = sClass.replace("Link", "");
+        var eContainer = document.getElementById(sClass);
         window.scroll(0, findPos(eContainer));
     }
 }
