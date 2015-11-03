@@ -31,28 +31,36 @@ function windowLoad() {
             linkDeflate(this);
         });
     }
+
+    $(function () { //bootstrap dropdown toggle fade
+        $('.dropdown-toggle').click(function () {
+            $(this).next('.dropdown-menu').fadeToggle(500);
+        });
+    });
 }
 
 function scrollTo(elem) {
     if (elem.className === "top") {
-        window.scroll(0, 0);
+        //window.scroll(0, 0); //instant scroll met js
+        $('html, body').animate({scrollTop: $("body").offset().top}, 500); //scrollen met jQuery
     } else {
         var sClass = elem.className;
         sClass = sClass.replace("Link", "");
         var eContainer = document.getElementById(sClass);
-        window.scroll(0, findPos(eContainer));
+        //window.scroll(0, findPos(eContainer)); //instant scroll met js
+        $('html, body').animate({scrollTop: $(eContainer).offset().top}, 500); //scrollen met jQuery
     }
 }
 
-function findPos(elem) {
-    var curtop = 0;
-    if (elem.offsetParent) {
-        do {
-            curtop += elem.offsetTop;
-        } while (elem = elem.offsetParent);
-        return [curtop];
-    }
-}
+/*function findPos(elem) { //positie van element vinden om naar te scrollen met js
+ var curtop = 0;
+ if (elem.offsetParent) {
+ do {
+ curtop += elem.offsetTop;
+ } while (elem = elem.offsetParent);
+ return [curtop];
+ }
+ }*/
 
 function linkExpand(elem) {
     var eParent = elem.parentNode;
