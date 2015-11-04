@@ -13,7 +13,8 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/portfolio.css">
         <link rel="stylesheet" href="css/modernizr.css">
-        <script src="libraries/jquery/jquery-1.11.3.min.js"></script>
+        <script src="js/jquery/jquery-1.11.3.min.js"></script>
+        <script src="js/jquery/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
         <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
         <script src="js/modernizr-custom.js" ></script>
         <script src="js/portfolio.js"></script>
@@ -87,23 +88,22 @@
             <a class="top" href="#">&#8679;</a>
             <h2>Contact</h2>
             <p>Onder constructie<p>
-                <!--
-            <form class="form-horizontal" action="http://formspree.io/sam_verhoeven3@hotmail.com" method="POST">
+            <form class="form-horizontal" id="contactform" action="http://formspree.io/sam_verhoeven3@hotmail.com" method="POST">
                 <div class="form-group col-sm-12">
                     <div class="row">
                         <div class="col-sm-6">
                             <label for="name">Uw naam: </label>
-                            <input class="form-control" type="text" name="name" placeholder="uw naam">
+                            <input class="form-control" id="name" type="text" name="name" placeholder="uw naam" required>
                         </div>
                         <div class="col-sm-6">
                             <label for="_replyto">Uw emailadres: </label>
-                            <input class="form-control" type="email" name="_replyto" placeholder="uw emailadres">
+                            <input class="form-control" id="_replyto" type="email" name="_replyto" placeholder="uw emailadres" required>
                         </div>
                     </div>
                 </div>
                 <div class="form-group col-sm-12">
                     <label for="message">Uw bericht: </label>
-                    <textarea class="form-control" name="message" cols="40" rows="5" maxlength="300" placeholder="uw bericht"></textarea>
+                    <textarea class="form-control" id="meesage" name="message" cols="40" rows="5" maxlength="300" placeholder="uw bericht" required></textarea>
                 </div>
                 <div class="form-group col-sm-12">
                     <input type="hidden" name="_next" value="#contact" />
@@ -111,7 +111,6 @@
                     <input class="btn btn-default" type="reset" value="verwijderen">
                 </div>
             </form>
-                -->
         </div>
         <footer>
             <div class="container_footer">

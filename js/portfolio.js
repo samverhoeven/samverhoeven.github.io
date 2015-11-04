@@ -37,6 +37,32 @@ function windowLoad() {
             $(this).next('.dropdown-menu').fadeToggle(500);
         });
     });
+    
+    $("#contactform").submit(function (e) {
+        e.preventDefault();
+    });
+    $("#contactform").validate({
+        debug: true,
+        rules:{
+            name: "required",
+            _replyto:{
+                required: true,
+                email: true
+            },
+            message: "required"
+        },
+        messages:{
+            name: "Vul uw naam in",
+            _replyto: {
+                required: "Vul uw emailadres in",
+                email: "Vul een geldig emailadres in"
+            },
+            message: "Zet iets in uw bericht"
+        },
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
 }
 
 function scrollTo(elem) {

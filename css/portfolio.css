@@ -219,8 +219,12 @@ header{
     text-decoration: none;
 }
 
+/*-contact-*/
 #bericht{
     line-height: 2em;
+}
+label.error{
+    color:#CC3366;
 }
 
 /*--footer--*/
