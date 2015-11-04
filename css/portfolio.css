@@ -170,16 +170,15 @@ header{
 
 #menu ul li{
     display: inline-block;
-    padding: 0 20px;
-    border-right: 2px solid white;
+    padding: 10px 20px;
     text-align: center;
 }
 
-#menu ul li:nth-child(1){
-    padding-left: 0;
+#menu ul li:hover{
+    background-color: rgba(255,255,255,0.95);
 }
-#menu ul li:last-child{
-    border: 0;
+#menu ul li:hover a{
+    color: #4863A0;
 }
 
 #menu ul li a{
@@ -188,8 +187,10 @@ header{
 }
 
 #menu ul li a:hover{
-    text-decoration: underline;
-
+    text-decoration: none;
+}
+#menu ul li a:focus{
+    text-decoration: none;
 }
 
 /*--divs om contect te centreren--*/
