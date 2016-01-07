@@ -3,14 +3,19 @@ function windowLoad() {
     var eTop = document.querySelectorAll(".csstransforms .top");
     var eIntro = document.querySelectorAll(".csstransforms .infoLink");
 
-    $.scrollify({
-     section: "section"
-     });
+    if ($(window).width() > 750) {
 
-    $("body").FancyIndex({
-        firstOnly: true,
-        scrollToDuration: 500
-    });
+        $.scrollify({
+            section: "section"
+        });
+
+        $("body").FancyIndex({
+            firstOnly: true,
+            scrollToDuration: 500
+        });
+    }
+
+
 
     if (window.addEventListener) {
         for (i = 0; i < eMenu.length; i++) {
