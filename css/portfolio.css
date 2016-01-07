@@ -250,6 +250,12 @@ header{
     text-decoration: none;
 }
 
+/*-info-*/
+svg{
+    height: 100px;
+    width: 100px;
+}
+
 /*-contact-*/
 #bericht{
     line-height: 2em;

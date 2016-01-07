@@ -5,17 +5,15 @@ function windowLoad() {
 
     if ($(window).width() > 750) {
 
-        $.scrollify({
+        $.scrollify({ //scroll snap per section
             section: "section"
         });
 
-        $("body").FancyIndex({
+        $("body").FancyIndex({ //fixed index met positieindicatie
             firstOnly: true,
             scrollToDuration: 500
         });
     }
-
-
 
     if (window.addEventListener) {
         for (i = 0; i < eMenu.length; i++) {
@@ -92,41 +90,17 @@ function scrollTo(elem) {
     }
 }
 
-/*function findPos(elem) { //positie van element vinden om naar te scrollen met js
- var curtop = 0;
- if (elem.offsetParent) {
- do {
- curtop += elem.offsetTop;
- } while (elem = elem.offsetParent);
- return [curtop];
- }
- }*/
-
 function linkExpand(elem) {
     var eParent = elem.parentNode;
-    //eParent.style.background = "#4863A0";
     var eSibling = elem.nextSibling;
     eSibling.style.opacity = 1;
     eSibling.style.marginTop = "25px";
 
-
-    //transitie via class verandering
-    /*var sClass = eSibling.className;
-     sClass = sClass.replace("fadeout","");
-     sClass += " fadein";
-     eSibling.className = sClass;*/
 }
 
 function linkDeflate(elem) {
     var eParent = elem.parentNode;
-    //eParent.style.background = "rgba(255,0,0,0)";
     var eSibling = elem.nextSibling;
     eSibling.style.opacity = 0;
     eSibling.style.marginTop = "-35px";
-
-    //transitie via class verandering
-    /*var sClass = eSibling.className; 
-     sClass = sClass.replace("fadein","");
-     sClass += " fadeout";
-     eSibling.className = sClass;*/
 }
