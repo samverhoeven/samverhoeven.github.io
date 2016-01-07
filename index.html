@@ -13,8 +13,11 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/portfolio.css">
         <link rel="stylesheet" href="css/modernizr.css">
+        <link href="js/jquery/eskju-jquery-fancyindex/css/eskju.jquery.fancyindex.css" rel="stylesheet" type="text/css"/>
         <script src="js/jquery/jquery-1.11.3.min.js"></script>
         <script src="js/jquery/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+        <script src="js/jquery/jquery.scrollify.min.js" type="text/javascript"></script>
+        <script src="js/jquery/eskju-jquery-fancyindex/js/eskju.jquery.fancyindex.min.js" type="text/javascript"></script>
         <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
         <script src="js/modernizr-custom.js" ></script>
         <script src="js/portfolio.js"></script>
@@ -25,99 +28,117 @@
         </script>
     </head>
     <body>
-        <div id="intro_totaal">
-            <div id="intro_back"><!--hier komt background img in--></div>
-            <div id="intro_wrap">
-                <div id="intro">
-                    <div id="menuLink_wrap">
-                        <a class="menuLink" href="#">Sam Verhoeven</a><p id="pijl_onder">&#10148;</p>
+        <section>
+            <h1 class="hiddenTitle">Sam Verhoeven</h1>
+            <div id="intro_totaal">
+                <div id="intro_back"><!--hier komt background img in--></div>
+                <div id="intro_wrap">
+                    <div id="intro">
+                        <div id="menuLink_wrap">
+                            <a class="infoLink" href="#">Sam Verhoeven</a><p id="pijl_onder">&#10148;</p>
+                        </div>
                     </div>
                 </div>
+                <!--<div class="dropdown" id="intro_nav">
+                    <a href="#" class="dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <span id="dropdownIcon" class="glyphicon glyphicon-menu-hamburger"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                        <li><a href="#" class="infoLink">Info</a></li>
+                        <li><a href="#" class="profielLink">Profiel</a></li>
+                        <li><a href="#" class="projectenLink">Projecten</a></li>
+                        <li><a href="#" class="contactLink">Contact</a></li>
+                    </ul>
+                </div>-->
             </div>
-            <div class="dropdown" id="intro_nav">
-                <a href="#" class="dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span id="dropdownIcon" class="glyphicon glyphicon-menu-hamburger"></span>
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                    <li><a href="#" class="infoLink">Info</a></li>
-                    <li><a href="#" class="profielLink">Profiel</a></li>
-                    <li><a href="#" class="projectenLink">Projecten</a></li>
-                    <li><a href="#" class="contactLink">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <header>
-<div class="container_header" id="menu" >
-                <nav >
-                        <ul>
+        </section>
+        <!--<section>
+            <header>
+                <div class="container_header" id="menu" >
+                    <nav >
+                        <ul>-->
                             <!--alles aan elkaar door display: inline-block-->
-                            <li><a href="#" class="infoLink">Info</a></li><li>
+                            <!--<li><a href="#" class="infoLink">Info</a></li><li>
                                 <a href="#" class="profielLink">Profiel</a></li><li>
                                 <a href="#" class="projectenLink">Projecten</a></li><li>
                                 <a href="#" class="contactLink">Contact</a></li>
                         </ul>
-                </nav>
+                    </nav>
+                </div>
+            </header>
+        </section>-->
+        <section>
+            <h2 class="hiddenTitle">Info</h2>
+            <div class="container" id="info">
+                <a class="top" href="#">&#8679;</a>
+                <p class="h2">Info</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-        </header>
-        <div class="container" id="info">
-            <a class="top" href="#">&#8679;</a>
-            <h2>Info</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="container" id="profiel">
-            <a class="top" href="#">&#8679;</a>
-            <h2>Profiel</h2>
-            <p>Ik heb veel interesse in software en webdevelopment, ik ben bovendien overtuigd over de
+        </section>
+        <section>
+            <h2 class="hiddenTitle">Profiel</h2>
+            <div class="container" id="profiel">
+                <a class="top" href="#">&#8679;</a>
+                <p class="h2">Profiel</p>
+                <p>Naast veel interesse in software en webdevelopment, ben ik er van overtuigd over de
 
-                nodige skills te beschikken die nodig zijn voor een goede programmeur. Ik hecht veel belang aan 
+                    nodige skills te beschikken die nodig zijn voor een goede programmeur. Ik hecht veel belang aan 
 
-                ordelijkheid en structuur, zowel privé als professioneel. Zo streef ik altijd een foutloze code na. 
+                    ordelijkheid en structuur, zowel privé als professioneel. Zo streef ik altijd een foutloze code na. 
 
-                Tijdens mijn bachelor opleiding heb ik aan enkele projecten gewerkt waarbij ik in team moest 
+                    Tijdens mijn bachelor opleiding heb ik aan enkele projecten gewerkt waarbij ik in team moest 
 
-                samenwerken maar waar ook elk individu zijn eigen verantwoordelijkheden had. Mijn 
+                    samenwerken maar waar ook elk individu zijn eigen verantwoordelijkheden had. Mijn 
 
-                luistervaardigheid heeft me toen goed geholpen en zal me ook goed te pas komen in contact met 
+                    luistervaardigheid heeft me toen goed geholpen en zal me ook goed te pas komen in contact met 
 
-                klanten.</p>
-        </div>
-        <div class="container" id="projecten">
-            <a class="top" href="#">&#8679;</a>
-            <h2>Projecten</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div class="container" id="contact">
-            <a class="top" href="#">&#8679;</a>
-            <h2>Contact</h2>
-            <form class="form-horizontal" id="contactform" action="http://formspree.io/sam_verhoeven3@hotmail.com" method="POST">
-                <div class="form-group col-sm-12">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <label for="name">Uw naam: </label>
-                            <input class="form-control" id="name" type="text" name="name" placeholder="uw naam" required>
-                        </div>
-                        <div class="col-sm-6">
-                            <label for="_replyto">Uw emailadres: </label>
-                            <input class="form-control" id="_replyto" type="email" name="_replyto" placeholder="uw emailadres" required>
+                    klanten.</p>
+            </div>
+        </section>
+        <section>
+            <h2 class="hiddenTitle">Projecten</h2>
+            <div class="container" id="projecten">
+                <a class="top" href="#">&#8679;</a>
+                <p class="h2">Projecten</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </section>
+        <section>
+            <h2 class="hiddenTitle">Contact</h2>
+            <div class="container" id="contact">
+                <a class="top" href="#">&#8679;</a>
+                <p class="h2">Contact</p>
+                <form class="form-horizontal" id="contactform" action="http://formspree.io/sam_verhoeven3@hotmail.com" method="POST">
+                    <div class="form-group col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="name">Uw naam: </label>
+                                <input class="form-control" id="name" type="text" name="name" placeholder="uw naam" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="_replyto">Uw emailadres: </label>
+                                <input class="form-control" id="_replyto" type="email" name="_replyto" placeholder="uw emailadres" required>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group col-sm-12">
-                    <label for="message">Uw bericht: </label>
-                    <textarea class="form-control" id="meesage" name="message" cols="40" rows="5" maxlength="300" placeholder="uw bericht" required></textarea>
-                </div>
-                <div class="form-group col-sm-12">
-                    <input type="hidden" name="_next" value="#contact" />
-                    <input class="btn btn-default" type="submit" name="Verzenden" value="verzenden">
-                    <input class="btn btn-default" type="reset" value="verwijderen">
-                </div>
-            </form>
-        </div>
-        <footer>
-            <div class="container_footer">
-                <p id="creator">Created by Sam Verhoeven</p>
-                <a id="linkedin" href="https://www.linkedin.com/in/samverhoeven/" target="_blank"><img alt="linkedin" src="img/linkedin.png"></a>
+                    <div class="form-group col-sm-12">
+                        <label for="message">Uw bericht: </label>
+                        <textarea class="form-control" id="meesage" name="message" cols="40" rows="5" maxlength="300" placeholder="uw bericht" required></textarea>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <input type="hidden" name="_next" value="#contact" />
+                        <input class="btn btn-default" type="submit" name="Verzenden" value="verzenden">
+                        <input class="btn btn-default" type="reset" value="verwijderen">
+                    </div>
+                </form>
             </div>
-        </footer>
+
+            <footer>
+                <div class="container_footer">
+                    <p id="creator">Created by Sam Verhoeven</p>
+                    <a id="linkedin" href="https://www.linkedin.com/in/samverhoeven/" target="_blank"><img alt="linkedin" src="img/linkedin.png"></a>
+                </div>
+            </footer>
+        </section>
     </body>
 </html>

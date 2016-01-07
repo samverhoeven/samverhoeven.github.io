@@ -1,7 +1,16 @@
 function windowLoad() {
     var eMenu = document.querySelectorAll(".csstransforms ul li a");
     var eTop = document.querySelectorAll(".csstransforms .top");
-    var eIntro = document.querySelectorAll(".csstransforms .menuLink");
+    var eIntro = document.querySelectorAll(".csstransforms .infoLink");
+
+    $.scrollify({
+     section: "section"
+     });
+
+    $("body").FancyIndex({
+        firstOnly: true,
+        scrollToDuration: 500
+    });
 
     if (window.addEventListener) {
         for (i = 0; i < eMenu.length; i++) {
@@ -37,21 +46,21 @@ function windowLoad() {
             $(this).next('.dropdown-menu').fadeToggle(500);
         });
     });
-    
+
     $("#contactform").submit(function (e) {
         e.preventDefault();
     });
     $("#contactform").validate({
         debug: true,
-        rules:{
+        rules: {
             name: "required",
-            _replyto:{
+            _replyto: {
                 required: true,
                 email: true
             },
             message: "required"
         },
-        messages:{
+        messages: {
             name: "Vul uw naam in",
             _replyto: {
                 required: "Vul uw emailadres in",
