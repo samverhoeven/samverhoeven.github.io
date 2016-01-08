@@ -183,54 +183,6 @@ p{
     transition: 2s ease;
 }
 
-/* transitie via class verandering ook mogelijk */
-/*.fadein{
-    opacity: 1 !important;
-}
-
-.fadeout{
-    opacity: 0 !important;
-}*/
-
-/*--menu--*/
-/*header{
-    background: #4863A0;
-    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
-}
-
-#menu ul{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#menu ul li{
-    display: inline-block;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-#menu ul li:hover{
-    background-color: rgba(255,255,255,0.95);
-}
-#menu ul li:hover a{
-    color: #4863A0;
-}
-
-#menu ul li a{
-    color: white;
-    font-size: 1.5em;
-}
-
-#menu ul li a:hover{
-    text-decoration: none;
-}
-#menu ul li a:focus{
-    text-decoration: none;
-}*/
-
 /*--divs om contect te centreren--*/
 .container_header{
     margin: 0px auto;
