@@ -15,7 +15,7 @@ function windowLoad() {
         });
     }
     if($(window).width() < 750){
-        $(".btn").addClass("col-xs-6");
+        //bootstrap aanpassing aan knoppen contactform enkel voor mobile
         $("#frmknoppen").html("<div class='row'>" +
                               "<input type='hidden' name='_next' value='#contact' />" + 
                               "<div class='col-xs-6'>" +
