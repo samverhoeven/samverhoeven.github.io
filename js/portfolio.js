@@ -3,9 +3,6 @@ function windowLoad() {
     var eTop = document.querySelectorAll(".csstransforms .top");
     var eIntro = document.querySelectorAll(".csstransforms .infoLink");
 
-    var hgt = $(window).heigth();
-    $("#intro_back").css("height",hgt);
-
     if ($(window).width() > 749) {
 
         $.scrollify({ //scroll snap per section
