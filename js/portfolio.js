@@ -3,32 +3,23 @@ function windowLoad() {
     var eTop = document.querySelectorAll(".csstransforms .top");
     var eIntro = document.querySelectorAll(".csstransforms .infoLink");
 
-    if($.browser.mobile){
-        var bg = jQuery("#intro_back");
-        
-        bg.css("background-attachment", "scroll");
-        
-        jQuery(window).resize("resizeBackground");
-        function resizeBackground() {
-            bg.height(jQuery(window).height() + 60);
-        }
-        resizeBackground();
-        
-    }
-
     if ($(window).width() > 749) {
-
-        $.scrollify({//scroll snap per section
-            section: "section"
-        });
-
         $("body").FancyIndex({//fixed index met positieindicatie
             firstOnly: true,
             scrollToDuration: 500
         });
     }
+
+    if ($("html").hasClass("no-touchevents")) { //checkt op touchevent class van Modernizr
+        $.scrollify({//scroll snap per section
+            section: "section"
+        });
+    } else {
+        $("#esKju-fancyIndex li").addClass("active");
+    }
+    
     if ($(window).width() < 750) {
-        //bootstrap aanpassing aan knoppen contactform enkel voor mobile
+        //bootstrap aanpassing aan knoppen contactform enkel voor kleine schermen
         $("#frmknoppen").html("<div class='row'>" +
                 "<input type='hidden' name='_next' value='#contact' />" +
                 "<div class='col-xs-6'>" +
@@ -38,6 +29,16 @@ function windowLoad() {
                 "<input class='btn btn-default col-xs-12' type='reset' value='verwijderen'>" +
                 "</div>" +
                 "</div>");
+
+        var bg = jQuery("#intro_back");
+
+        bg.css("background-attachment", "scroll");
+
+        jQuery(window).resize("resizeBackground");
+        function resizeBackground() {
+            bg.height(jQuery(window).height() + 60);
+        }
+        resizeBackground();
     }
 
     if (window.addEventListener) {

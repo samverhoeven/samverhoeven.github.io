@@ -271,9 +271,9 @@ footer{
 /*---mediaqueries---*/
 @media screen and (max-width: 749px) {
     /*--intro background--*/
-    #intro_back{
+    /*#intro_back{
         background-attachment: scroll;
-    }
+    }*/
     
     /*--breedte content--*/
     .container{

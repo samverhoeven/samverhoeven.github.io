@@ -1,23 +1,15 @@
 .no-csstransforms #pijl_onder{
     display: none;
 }
-.no-csstransforms .menuLink{
-    vertical-align: 0px;
-    cursor: default;
-}
-
-.no-csstransforms .dropdown{
-    display: none;
-}
-
-/*.no-rgba .dropdown-menu{
-    background-color: black;
-}*/
-
-.no-csstransforms #menu{
-    display: none;
-}
 
 .placeholder label{
     display: none;;
+}
+
+.touchevents #intro_back{
+    background-attachment: scroll;
+}
+
+.touchevents #esKju-fancyIndex{
+    position: absolute;
 }
