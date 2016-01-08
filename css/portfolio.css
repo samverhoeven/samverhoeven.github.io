@@ -268,8 +268,14 @@ svg{
     width: 11%;
     margin: -2px;
 }
+#skills .h2{
+    color: #02356A;
+}
 
 /*-contact-*/
+#contact .h2{
+    color: #02356A;
+}
 #bericht{
     line-height: 2em;
 }
@@ -304,4 +310,29 @@ footer{
 #creator{
     float: right;
     color: white;
+}
+
+/*---mediaqueries---*/
+@media screen and (max-width: 749px) {
+    /*--breedte content--*/
+    .container{
+        width: 90%;
+    }
+    
+    /*--contact--*/
+    #contact #gegevens, #contact #gegevens .row{
+    margin-bottom: 0px; 
+    }
+    #contact #gegevens div{
+    margin-bottom: 5px; 
+    }
+    #contact #bericht{
+    margin-bottom: 5px; 
+    }
+    #contact #frmknoppen .row div:nth-child(2){
+        padding-right: 2px;
+    }
+    #contact #frmknoppen .row div:nth-child(3){
+        padding-left: 2px;
+    }
 }

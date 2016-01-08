@@ -3,7 +3,7 @@ function windowLoad() {
     var eTop = document.querySelectorAll(".csstransforms .top");
     var eIntro = document.querySelectorAll(".csstransforms .infoLink");
 
-    if ($(window).width() > 750) {
+    if ($(window).width() > 749) {
 
         $.scrollify({ //scroll snap per section
             section: "section"
@@ -13,6 +13,18 @@ function windowLoad() {
             firstOnly: true,
             scrollToDuration: 500
         });
+    }
+    if($(window).width() < 750){
+        $(".btn").addClass("col-xs-6");
+        $("#frmknoppen").html("<div class='row'>" +
+                              "<input type='hidden' name='_next' value='#contact' />" + 
+                              "<div class='col-xs-6'>" +
+                              "<input class='btn btn-default col-xs-12' type='submit' name='Verzenden' value='verzenden'>" + 
+                              "</div>" +
+                              "<div class='col-xs-6'>" +
+                              "<input class='btn btn-default col-xs-12' type='reset' value='verwijderen'>" + 
+                              "</div>" +
+                              "</div>");
     }
 
     if (window.addEventListener) {

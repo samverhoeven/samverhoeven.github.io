@@ -110,7 +110,7 @@
                 <a class="top" href="#">&#8679;</a>
                 <p class="h2">Contact</p>
                 <form class="form-horizontal" id="contactform" action="http://formspree.io/sam_verhoeven3@hotmail.com" method="POST">
-                    <div class="form-group col-sm-12">
+                    <div id="gegevens" class="form-group col-sm-12">
                         <div class="row">
                             <div class="col-sm-6">
                                 <label for="name">Uw naam: </label>
@@ -122,11 +122,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group col-sm-12">
+                    <div id="bericht" class="form-group col-sm-12">
                         <label for="message">Uw bericht: </label>
                         <textarea class="form-control" id="meesage" name="message" cols="40" rows="5" maxlength="300" placeholder="uw bericht" required></textarea>
                     </div>
-                    <div class="form-group col-sm-12">
+                    <div id="frmknoppen" class="form-group col-sm-12">
                         <input type="hidden" name="_next" value="#contact" />
                         <input class="btn btn-default" type="submit" name="Verzenden" value="verzenden">
                         <input class="btn btn-default" type="reset" value="verwijderen">
