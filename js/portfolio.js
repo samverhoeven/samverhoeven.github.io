@@ -1,6 +1,6 @@
 function windowLoad() {
     var eTop = document.querySelectorAll(".csstransforms .top");
-    var eIntro = document.querySelectorAll(".csstransforms .infoLink");
+    var eIntro = document.querySelectorAll(".csstransforms .topinfoLink");
 
     if (window.addEventListener) {
 
@@ -27,6 +27,7 @@ function windowLoad() {
 
     if ($(window).width() > 749) {
         $("body").FancyIndex({//fancy index met positieindicatie
+            firstOnly: true,
             scrollToDuration: 500
         });
     }
@@ -35,32 +36,35 @@ function windowLoad() {
         /*$.scrollify({//scroll snap per section
          section: "section"
          });*/
-        var scrollorama = $.scrollorama({//animatie per scrollblock
+        /*var scrollorama = $.scrollorama({//animatie per scrollblock
             blocks: "section",
             enablePin: false
         });
 
         //#info scrollanimaties
-        scrollorama.animate("#info .h2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
-        scrollorama.animate("#info .h2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
-        scrollorama.animate("#info .tekst", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
-        scrollorama.animate("#info .tekst", {duration: 500, delay: 100, property: "top", start: 500, end: 0, easing: "easeInOutCubic"});
+        scrollorama.animate("#info .heading2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
+        scrollorama.animate("#info .heading2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
+        //scrollorama.animate("#info .tekst", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
+        scrollorama.animate("#info .tekst", {duration: 500, delay: 100, property: "top", start: 300, end: 0, easing: "easeInOutCubic"});
 
         //#skills scrollanimaties
-        scrollorama.animate("#skills .h2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
-        scrollorama.animate("#skills .h2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
+        scrollorama.animate("#skills .heading2", {duration: 500, delay: 100, property: "right", start: -300, end: 0, easing: "easeInOutCubic"});
+        scrollorama.animate("#skills .heading2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
 
         //#projecten scrollanimaties
-        scrollorama.animate("#projecten .h2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
-        scrollorama.animate("#projecten .h2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
+        scrollorama.animate("#projecten .heading2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
+        scrollorama.animate("#projecten .heading2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
         scrollorama.animate("#projecten .tekst", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
         scrollorama.animate("#projecten .tekst", {duration: 500, delay: 100, property: "left", start: 500, end: 0, easing: "easeInOutCubic"});
 
         //#contact scrollanimaties
-        scrollorama.animate("#contact .h2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
-        scrollorama.animate("#contact .h2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
+        //scrollorama.animate("#contact .h2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
+        scrollorama.animate("#contact .heading2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
         scrollorama.animate("#contact form", {duration: 500, delay: 100, property: "opacity", start: 0.5, end: 1, easing: "easeInOutCubic"});
-        scrollorama.animate("#contact form", {duration: 500, delay: 100, property: "top", start: 200, end: 0, easing: "easeInOutCubic"});
+        scrollorama.animate("#contact form", {duration: 500, delay: 100, property: "top", start: 200, end: 0, easing: "easeInOutCubic"});*/
+        
+        new ScrollFlow();
+        
     } else {
         $("#esKju-fancyIndex li").addClass("active");
     }
