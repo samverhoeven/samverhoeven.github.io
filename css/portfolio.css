@@ -27,20 +27,24 @@ section{
     padding-top: 5%;
 }
 
-section:nth-child(1){
+.block:nth-child(n+2){
+    overflow-x: hidden; 
+}
+
+#block1{
     padding-top: 0px;
 }
 
-section:nth-child(2){
+#block2{
     background-color: #02356A; 
 }
-section:nth-child(3){
+#block3{
     background-color: #6699CC; 
 }
-section:nth-child(4){
+#block4{
     background-color: #C0C0C0; 
 }
-section:nth-child(5){
+#block5{
     background-color: #6699CC; 
 }
 
@@ -58,7 +62,7 @@ a:focus{
 }
 
 p{
-    margin: 0;
+    margin: 10px 0;
 }
 
 .h2{
@@ -216,6 +220,14 @@ p{
 /*-info-*/
 #info .h2{
     color: #8FA2CD;
+}
+#profielfoto{
+    width: 30%;
+    float: right;
+    
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 
 /*-skills-*/

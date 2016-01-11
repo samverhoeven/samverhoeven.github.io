@@ -1,23 +1,70 @@
 function windowLoad() {
-    var eMenu = document.querySelectorAll(".csstransforms ul li a");
     var eTop = document.querySelectorAll(".csstransforms .top");
     var eIntro = document.querySelectorAll(".csstransforms .infoLink");
 
+    if (window.addEventListener) {
+
+        for (i = 0; i < eTop.length; i++) {
+            eTop[i].addEventListener("click", function (e) {
+                e.preventDefault();
+                scrollTo(this);
+            });
+        }
+
+        eIntro[0].addEventListener("click", function (e) {
+            e.preventDefault();
+            scrollTo(this);
+        });
+        eIntro[0].addEventListener("mouseover", function (e) {
+            e.preventDefault();
+            linkExpand(this);
+        });
+        eIntro[0].addEventListener("mouseout", function (e) {
+            e.preventDefault();
+            linkDeflate(this);
+        });
+    }
+
     if ($(window).width() > 749) {
-        $("body").FancyIndex({//fixed index met positieindicatie
-            firstOnly: true,
+        $("body").FancyIndex({//fancy index met positieindicatie
             scrollToDuration: 500
         });
     }
 
     if ($("html").hasClass("no-touchevents")) { //checkt op touchevent class van Modernizr
-        $.scrollify({//scroll snap per section
-            section: "section"
+        /*$.scrollify({//scroll snap per section
+         section: "section"
+         });*/
+        var scrollorama = $.scrollorama({//animatie per scrollblock
+            blocks: "section",
+            enablePin: false
         });
+
+        //#info scrollanimaties
+        scrollorama.animate("#info .h2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
+        scrollorama.animate("#info .h2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
+        scrollorama.animate("#info .tekst", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
+        scrollorama.animate("#info .tekst", {duration: 500, delay: 100, property: "top", start: 500, end: 0, easing: "easeInOutCubic"});
+
+        //#skills scrollanimaties
+        scrollorama.animate("#skills .h2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
+        scrollorama.animate("#skills .h2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
+
+        //#projecten scrollanimaties
+        scrollorama.animate("#projecten .h2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
+        scrollorama.animate("#projecten .h2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
+        scrollorama.animate("#projecten .tekst", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
+        scrollorama.animate("#projecten .tekst", {duration: 500, delay: 100, property: "left", start: 500, end: 0, easing: "easeInOutCubic"});
+
+        //#contact scrollanimaties
+        scrollorama.animate("#contact .h2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
+        scrollorama.animate("#contact .h2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
+        scrollorama.animate("#contact form", {duration: 500, delay: 100, property: "opacity", start: 0.5, end: 1, easing: "easeInOutCubic"});
+        scrollorama.animate("#contact form", {duration: 500, delay: 100, property: "top", start: 200, end: 0, easing: "easeInOutCubic"});
     } else {
         $("#esKju-fancyIndex li").addClass("active");
     }
-    
+
     if ($(window).width() < 750) {
         //bootstrap aanpassing aan knoppen contactform enkel voor kleine schermen
         $("#frmknoppen").html("<div class='row'>" +
@@ -41,40 +88,7 @@ function windowLoad() {
         resizeBackground();
     }
 
-    if (window.addEventListener) {
-        for (i = 0; i < eMenu.length; i++) {
-            eMenu[i].addEventListener("click", function (e) {
-                e.preventDefault();
-                scrollTo(this);
-            });
-        }
 
-        for (i = 0; i < eTop.length; i++) {
-            eTop[i].addEventListener("click", function (e) {
-                e.preventDefault();
-                scrollTo(this);
-            });
-        }
-
-        eIntro[0].addEventListener("click", function (e) {
-            e.preventDefault();
-            scrollTo(this);
-        });
-        eIntro[0].addEventListener("mouseover", function (e) {
-            e.preventDefault();
-            linkExpand(this);
-        });
-        eIntro[0].addEventListener("mouseout", function (e) {
-            e.preventDefault();
-            linkDeflate(this);
-        });
-    }
-
-    $(function () { //bootstrap dropdown toggle fade
-        $('.dropdown-toggle').click(function () {
-            $(this).next('.dropdown-menu').fadeToggle(500);
-        });
-    });
 
     $("#contactform").submit(function (e) {
         e.preventDefault();

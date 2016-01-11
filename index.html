@@ -19,6 +19,7 @@
         <script src="js/jquery/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
         <script src="js/jquery/jquery.scrollify.min.js" type="text/javascript"></script>
         <script src="js/jquery/eskju-jquery-fancyindex/js/eskju.jquery.fancyindex.min.js" type="text/javascript"></script>
+        <script src="js/jquery/jquery.scrollorama.js" type="text/javascript"></script>
         <script src="libraries/bootstrap/js/bootstrap.min.js"></script>
         <script src="js/modernizr-custom.js" ></script>
         <script src="js/portfolio.js"></script>
@@ -29,7 +30,7 @@
         </script>
     </head>
     <body>
-        <section>
+        <section class="block" id="block1">
             <h1 class="hiddenTitle">Sam Verhoeven</h1>
             <div id="intro_totaal">
                 <div id="intro_back"><!--hier komt background img in--></div>
@@ -42,17 +43,22 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="block" id="block2">
             <h2 class="hiddenTitle">Info</h2>
             <div class="container" id="info">
                 <a class="top" href="#">&#8679;</a>
                 <p class="h2">Info</p>
-                <p>Naast veel interesse in software en webdevelopment, ben ik er van overtuigd over de
+                <img id="profielfoto" src="img/profiel_facebook.jpg" alt="profielfoto">
+                <div class="tekst">
+                <p >Naast veel interesse in software en webdevelopment, ben ik er van overtuigd over de
 
-                    nodige skills te beschikken die nodig zijn voor een goede programmeur. Ik hecht veel belang aan 
+                    nodige skills te beschikken die nodig zijn voor een goede programmeur. 
+                </p>
+                <p>Ik hecht veel belang aan 
 
                     ordelijkheid en structuur, zowel privé als professioneel. Zo streef ik altijd een foutloze code na. 
-
+                </p>
+                <p>
                     Tijdens mijn bachelor opleiding heb ik aan enkele projecten gewerkt waarbij ik in team moest 
 
                     samenwerken maar waar ook elk individu zijn eigen verantwoordelijkheden had. Mijn 
@@ -60,14 +66,16 @@
                     luistervaardigheid heeft me toen goed geholpen en zal me ook goed te pas komen in contact met 
 
                     klanten.</p>
+                </div>
+
             </div>
         </section>
-        <section>
+        <section class="block" id="block3">
             <h2 class="hiddenTitle">Skills</h2>
             <div class="container" id="skills">
                 <a class="top" href="#">&#8679;</a>
                 <p class="h2">Skills</p>
-                <svg viewBox="0 0 128 128"><!--HTML5-->
+                <svg id="svg1" viewBox="0 0 128 128"><!--HTML5-->
                 <path fill="#E44D26" d="M19.569 27l8.087 89.919 36.289 9.682 36.39-9.499 8.096-90.102h-88.862zm72.041 20.471l-.507 5.834-.223 2.695h-42.569l1.017 12h40.54l-.271 2.231-2.615 28.909-.192 1.69-22.79 6.134v-.005l-.027.012-22.777-5.916-1.546-17.055h11.168l.791 8.46 12.385 3.139.006-.234v.012l12.412-2.649 1.296-13.728h-38.555l-2.734-30.836-.267-3.164h55.724000000000004l-.266 2.471zM27.956 1.627h5.622v5.556h5.144v-5.556h5.623v16.822h-5.623v-5.633h-5.143v5.633h-5.623v-16.822zM51.738 7.206h-4.95v-5.579h15.525v5.579h-4.952v11.243h-5.623v-11.243zM64.777 1.627h5.862l3.607 5.911 3.603-5.911h5.865v16.822h-5.601v-8.338l-3.867 5.981h-.098l-3.87-5.981v8.338h-5.502v-16.822zM86.513 1.627h5.624v11.262h7.907v5.561h-13.531v-16.823z"></path>
                 </svg>
                 <svg viewBox="0 0 128 128"><!--CSS3-->
@@ -96,15 +104,15 @@
                 </svg>
             </div>
         </section>
-        <section>
+        <section class="block" id="block4">
             <h2 class="hiddenTitle">Projecten</h2>
             <div class="container" id="projecten">
                 <a class="top" href="#">&#8679;</a>
                 <p class="h2">Projecten</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class="tekst">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </section>
-        <section>
+        <section class="block" id="block5">
             <h2 class="hiddenTitle">Contact</h2>
             <div class="container" id="contact">
                 <a class="top" href="#">&#8679;</a>
