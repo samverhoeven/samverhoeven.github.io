@@ -96,7 +96,6 @@ p{
     background: url("../img/code_web.jpg") no-repeat center center fixed;
     opacity: 0.6;
     height: 100%;
-    //width: 100%;
     left: 0;
     top: 0;
     z-index: -10;
@@ -210,6 +209,7 @@ p{
     width: 70%;
     color: white;
     padding: 10px;
+    
 }
 
 .container .top{
@@ -228,9 +228,13 @@ p{
 #info .heading2{
     color: #8FA2CD;
 }
+#info p:nth-child(1){
+    margin-top: 0px;
+}
 #profielfoto{
     width: 30%;
     float: right;
+    margin: 0 0 20px 20px;
 
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
@@ -238,26 +242,34 @@ p{
 }
 
 /*-skills-*/
-/*svg{
-    height: 10%;
-    width: 10%;
-}*/
 #skills .heading2{
     color: #02356A;
 }
 
 .skill{
-    margin: 10px 0;
+    margin: 10px 0px;
+    position: relative;
+    
+}
+
+.skillbar-wrap{
+    height: 100%;
+    position: absolute;
+    right: 0;
 }
 
 .skillbar{
-    height: 30px;
+    height: 20%;
+    width: 0%;
     background-color: #FFB739;
-    margin: 35px 0;
-    
     border-radius: 10px;
+    position: absolute;
+    top: 40%;
+    bottom: 40%;
+    margin-left: -15px;
 }
 /*#skillbar1{
+    width: 95%;
 }
 #skillbar2{
     width: 95%;
@@ -283,6 +295,8 @@ p{
 #skillbar9{
     width: 50%;
 }*/
+
+
 
 
 /*-projecten-*/
