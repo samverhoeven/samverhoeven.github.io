@@ -64,7 +64,7 @@ function windowLoad() {
 
         new ScrollFlow();
 
-        $(window).on("scrollstop", function () {
+        $(window).on("scroll", function () {
             var opacitystr = $("#skills .heading2").css("webkitFilter");
             var regExp = /\(([^)]+)\)/;
             var modopacitystr = regExp.exec(opacitystr);
