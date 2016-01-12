@@ -36,13 +36,13 @@ section{
 }
 
 #block2{
-    background-color: #EBAC78; 
+    background-color: #EBAC78;//#02356A 
 }
 #block3{
     background-color: #6699CC; 
 }
 #block4{
-    background-color: #EBAC78; 
+    background-color: #EBAC78;//#C0C0C0
 }
 #block5{
     background-color: #6699CC; 
@@ -226,7 +226,7 @@ p{
 
 /*-info-*/
 #info .heading2{
-    color: #02356A;
+    color: #02356A;//#8FA2CD
 }
 #info p:nth-child(1){
     margin-top: 0px;
@@ -301,8 +301,8 @@ p{
 
 /*-projecten-*/
 
-#contact .heading2{
-    color: #02356A;
+#projecten .heading2{
+    color: #02356A;//#4863A0
 }
 
 /*-contact-*/
