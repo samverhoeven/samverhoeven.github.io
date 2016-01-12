@@ -35,56 +35,13 @@ function windowLoad() {
         /*$.scrollify({//scroll snap per section
          section: "section"
          });*/
-        /*var scrollorama = $.scrollorama({//animatie per scrollblock
-         blocks: "section",
-         enablePin: false
-         });
-         
-         //#info scrollanimaties
-         scrollorama.animate("#info .heading2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
-         scrollorama.animate("#info .heading2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
-         //scrollorama.animate("#info .tekst", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
-         scrollorama.animate("#info .tekst", {duration: 500, delay: 100, property: "top", start: 300, end: 0, easing: "easeInOutCubic"});
-         
-         //#skills scrollanimaties
-         scrollorama.animate("#skills .heading2", {duration: 500, delay: 100, property: "right", start: -300, end: 0, easing: "easeInOutCubic"});
-         scrollorama.animate("#skills .heading2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
-         
-         //#projecten scrollanimaties
-         scrollorama.animate("#projecten .heading2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
-         scrollorama.animate("#projecten .heading2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
-         scrollorama.animate("#projecten .tekst", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
-         scrollorama.animate("#projecten .tekst", {duration: 500, delay: 100, property: "left", start: 500, end: 0, easing: "easeInOutCubic"});
-         
-         //#contact scrollanimaties
-         //scrollorama.animate("#contact .h2", {duration: 500, delay: 100, property: "opacity", start: 0, end: 1, easing: "easeInOutCubic"});
-         scrollorama.animate("#contact .heading2", {duration: 500, delay: 100, property: "left", start: -300, end: 0, easing: "easeInOutCubic"});
-         scrollorama.animate("#contact form", {duration: 500, delay: 100, property: "opacity", start: 0.5, end: 1, easing: "easeInOutCubic"});
-         scrollorama.animate("#contact form", {duration: 500, delay: 100, property: "top", start: 200, end: 0, easing: "easeInOutCubic"});*/
 
         new ScrollFlow();
 
-        $(window).on("scroll", function () {
-            var opacitystr = $("#skills .heading2").css("webkitFilter");
-            var regExp = /\(([^)]+)\)/;
-            var modopacitystr = regExp.exec(opacitystr);
-            modopacitystr = modopacitystr[0].substring(1).slice(0, -1);
-            console.log(modopacitystr);
-
-            if (modopacitystr >= 0.95) {
-                console.log("test skills heading opacity");
-                $("#skillbar1").animate({width: "95%"}, 1000);
-                $("#skillbar2").animate({width: "95%"}, 1000);
-                $("#skillbar3").animate({width: "90%"}, 1000);
-                $("#skillbar4").animate({width: "90%"}, 1000);
-                $("#skillbar5").animate({width: "80%"}, 1000);
-                $("#skillbar6").animate({width: "70%"}, 1000);
-                $("#skillbar7").animate({width: "70%"}, 1000);
-                $("#skillbar8").animate({width: "60%"}, 1000);
-                $("#skillbar9").animate({width: "50%"}, 1000);
-            } else {
-                $(".skillbar").animate({width: "0%"}, 500);
-            }
+        skillbarAnimate(1000, 500);
+        $(window).on("scroll", function (e) {
+            e.stopPropagation();
+            skillbarAnimate(1000, 500);
         });
 
     } else {
@@ -169,4 +126,26 @@ function linkDeflate(elem) {
     var eSibling = elem.nextSibling;
     eSibling.style.opacity = 0;
     eSibling.style.marginTop = "-35px";
+}
+
+function skillbarAnimate(scrolldownTime, scrollupTime) {
+    var windowTop = $(window).scrollTop();
+    var windowHalf = windowTop + ($(window).height() / 4) * 3;
+    var skillTop = $("#skills").offset().top;
+    animationDone = false;
+    if (windowHalf >= skillTop) {
+        
+        $("#skillbar1").animate({width: "95%"}, scrolldownTime);
+        $("#skillbar2").animate({width: "95%"}, scrolldownTime);
+        $("#skillbar3").animate({width: "90%"}, scrolldownTime);
+        $("#skillbar4").animate({width: "90%"}, scrolldownTime);
+        $("#skillbar5").animate({width: "80%"}, scrolldownTime);
+        $("#skillbar6").animate({width: "70%"}, scrolldownTime);
+        $("#skillbar7").animate({width: "70%"}, scrolldownTime);
+        $("#skillbar8").animate({width: "60%"}, scrolldownTime);
+        $("#skillbar9").animate({width: "50%"}, scrolldownTime);
+    } else {
+        $(".skillbar").stop(true, false);
+        $(".skillbar").css("width", "0%");
+    }
 }
