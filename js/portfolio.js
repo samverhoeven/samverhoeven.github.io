@@ -32,9 +32,6 @@ function windowLoad() {
     }
 
     if ($("html").hasClass("no-touchevents")) { //checkt op touchevent class van Modernizr
-        /*$.scrollify({//scroll snap per section
-         section: "section"
-         });*/
 
         new ScrollFlow();
 
