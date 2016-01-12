@@ -64,14 +64,14 @@ function windowLoad() {
 
         new ScrollFlow();
 
-        $(window).on("scroll", function () {
+        $(window).on("scrollstop", function () {
             var opacitystr = $("#skills .heading2").css("webkitFilter");
             var regExp = /\(([^)]+)\)/;
             var modopacitystr = regExp.exec(opacitystr);
             modopacitystr = modopacitystr[0].substring(1).slice(0, -1);
             console.log(modopacitystr);
 
-            if (modopacitystr >= 0.9) {
+            if (modopacitystr >= 0.95) {
                 console.log("test skills heading opacity");
                 $("#skillbar1").animate({width: "95%"}, 1000);
                 $("#skillbar2").animate({width: "95%"}, 1000);
@@ -86,9 +86,6 @@ function windowLoad() {
                 $(".skillbar").animate({width: "0%"}, 500);
             }
         });
-        $(window).on('scroll', function (e) {
-            console.log(e.type + '-event was 250ms not triggered');
-        }, 250);
 
     } else {
         $("#esKju-fancyIndex li").addClass("active");
