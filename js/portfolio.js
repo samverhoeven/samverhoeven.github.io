@@ -15,6 +15,7 @@ function windowLoad() {
             e.preventDefault();
             scrollTo(this);
         });
+        
         eIntro[0].addEventListener("mouseover", function (e) {
             e.preventDefault();
             linkExpand(this);
