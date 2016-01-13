@@ -21,13 +21,12 @@ body{
 }
 
 section{
-    
     position: relative;
+    margin: 0;
 }
 
 .block:nth-child(n+2){
     overflow: hidden;
-
 }
 
 #block1{
@@ -99,6 +98,7 @@ p{
     left: 0;
     top: 0;
     display: block;
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -121,7 +121,7 @@ p{
     webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    
+
     z-index: 10;
 }
 
@@ -196,11 +196,11 @@ p{
     width: 70%;
     color: white;
     padding: 10px;
-    
+
 }
 
 .container .top{
-    font-size: 1.5em;
+    font-size: 2em;
     float: right;
     color: white;
     clear: right;
