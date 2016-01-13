@@ -236,9 +236,16 @@ p{
 .skill{
     margin: 10px 0px;
     position: relative;
+    height: 100%;
 }
 
-svg{
+.devicon{
+    min-height: 100%; 
+    height: auto;
+}
+
+.devicon-wrap{
+    width: 100%;
 }
 
 .skillbar-wrap{
@@ -284,9 +291,6 @@ svg{
 #skillbar9{
     width: 50%;
 }*/
-
-
-
 
 /*-projecten-*/
 
