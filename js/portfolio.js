@@ -207,7 +207,7 @@ function skillsFontIcons() {
                     + '</div>'
                     + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar9"></div></div>'
                 + '</div>'
-                + '<a class="top" href="#">&#8679;</a>';
+                + '<a class="top" href="#">C</a>';
         
         $("#skills").html(skillsinhoud);
         
