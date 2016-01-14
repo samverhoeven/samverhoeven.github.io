@@ -1,4 +1,5 @@
 function windowLoad() {
+
     var eTop = document.querySelectorAll(".csstransforms .top");
     var eIntro = document.querySelectorAll(".csstransforms .topinfoLink");
 
@@ -18,16 +19,20 @@ function windowLoad() {
 
         eIntro[0].addEventListener("mouseover", function (e) {
             e.preventDefault();
-            linkExpand(this);
+            if ($("html").hasClass("no-touchevents")) {
+                linkExpand(this);
+            }
         });
         eIntro[0].addEventListener("mouseout", function (e) {
             e.preventDefault();
-            linkDeflate(this);
+            if ($("html").hasClass("no-touchevents")) {
+                linkDeflate(this);
+            }
         });
     }
 
     skillsFontIcons();//checken op Safari en svg veranderen in font
-    
+
     if ($(window).width() > 749) {
         $("body").FancyIndex({//fancy index met positieindicatie
             scrollToDuration: 500
@@ -154,63 +159,63 @@ function skillsFontIcons() {
     if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
         var skillsinhoud = '<p class="heading2 scrollflow -slide-left -opacity">Skills</p>'
                 + '<div class="skill row">'
-                    + '<div class="devicon-wrap col-xs-3 col-sm-2">'
-                        + '<i class="devicon devicon-html5-plain-wordmark colored"></i>'
-                    + '</div>'
-                    + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar1"></div></div>'
+                + '<div class="devicon-wrap col-xs-3 col-sm-2">'
+                + '<i class="devicon devicon-html5-plain-wordmark colored"></i>'
+                + '</div>'
+                + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar1"></div></div>'
                 + '</div>'
                 + '<div class="skill row">'
-		    + '<div class="devicon-wrap col-xs-3 col-sm-2">'
-                        + '<i class="devicon-css3-plain-wordmark colored"></i>'
-                    + '</div>'
-                    + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar2"></div></div>'
+                + '<div class="devicon-wrap col-xs-3 col-sm-2">'
+                + '<i class="devicon-css3-plain-wordmark colored"></i>'
+                + '</div>'
+                + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar2"></div></div>'
                 + '</div>'
                 + '<div class="skill row">'
-                    + '<div class="devicon-wrap col-xs-3 col-sm-2">'
-                        + '<i class="devicon-javascript-plain colored"></i>'
-                    + '</div>'
-                    + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar3"></div></div>'
+                + '<div class="devicon-wrap col-xs-3 col-sm-2">'
+                + '<i class="devicon-javascript-plain colored"></i>'
+                + '</div>'
+                + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar3"></div></div>'
                 + '</div>'
                 + '<div class="skill row">'
-                    + '<div class="devicon-wrap col-xs-3 col-sm-2">'
-                        + '<i class="devicon-jquery-plain-wordmark colored"></i>'
-                    + '</div>'
-                    + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar4"></div></div>'
+                + '<div class="devicon-wrap col-xs-3 col-sm-2">'
+                + '<i class="devicon-jquery-plain-wordmark colored"></i>'
+                + '</div>'
+                + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar4"></div></div>'
                 + '</div>'
                 + '<div class="skill row">'
-                    + '<div class="devicon-wrap col-xs-3 col-sm-2">'
-                        + '<i class="devicon-php-plain colored"></i>'
-                    + '</div>'
-                    + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar5"></div></div>'
+                + '<div class="devicon-wrap col-xs-3 col-sm-2">'
+                + '<i class="devicon-php-plain colored"></i>'
+                + '</div>'
+                + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar5"></div></div>'
                 + '</div>'
                 + '<div class="skill row">'
-                    + '<div class="devicon-wrap col-xs-3 col-sm-2">'
-                        + '<i class="devicon-mysql-plain-wordmark colored"></i>'
-                    + '</div>'
-                    + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar6"></div></div>'
+                + '<div class="devicon-wrap col-xs-3 col-sm-2">'
+                + '<i class="devicon-mysql-plain-wordmark colored"></i>'
+                + '</div>'
+                + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar6"></div></div>'
                 + '</div>'
                 + '<div class="skill row">'
-                    + '<div class="devicon-wrap col-xs-3 col-sm-2">'
-                        + '<i class="devicon-bootstrap-plain-wordmark colored"></i>'
-                    + '</div>'
-                    + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar7"></div></div>'
+                + '<div class="devicon-wrap col-xs-3 col-sm-2">'
+                + '<i class="devicon-bootstrap-plain-wordmark colored"></i>'
+                + '</div>'
+                + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar7"></div></div>'
                 + '</div>'
                 + '<div class="skill row">'
-                    + '<div class="devicon-wrap col-xs-3 col-sm-2">'
-                        + '<i class="devicon-github-plain-wordmark colored"></i>'
-                    + '</div>'
-                    + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar8"></div></div>'
+                + '<div class="devicon-wrap col-xs-3 col-sm-2">'
+                + '<i class="devicon-github-plain-wordmark colored"></i>'
+                + '</div>'
+                + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar8"></div></div>'
                 + '</div>'
                 + '<div class="skill row">'
-                    + '<div class="devicon-wrap col-xs-3 col-sm-2">'
-                        + '<i class="devicon-photoshop-plain colored"></i>'
-                    + '</div>'
-                    + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar9"></div></div>'
+                + '<div class="devicon-wrap col-xs-3 col-sm-2">'
+                + '<i class="devicon-photoshop-plain colored"></i>'
+                + '</div>'
+                + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar9"></div></div>'
                 + '</div>'
                 + '<a class="top" href="#">C</a>';
-        
+
         $("#skills").html(skillsinhoud);
-        
+
         $(".devicon-wrap").fitText();
     }
 }

@@ -1,5 +1,12 @@
 .no-csstransforms #pijl_onder{
-    display: none;
+    //display: none;
+}
+
+
+
+.no-touchevents #pijl_onder{
+    margin-top: -35px;
+    opacity: 0;
 }
 
 .placeholder label{
