@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'ArrrowsRegular';
+    src: url('arrrows-regular-webfont.woff') format('woff');
+    //url('arrrows-regular-webfont.ttf'); 
+        
+    font-weight: normal;
+    font-style: normal;
+}

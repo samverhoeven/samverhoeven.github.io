@@ -200,11 +200,12 @@ p{
 }
 
 .container .top{
+    font-family: ArrrowsRegular;
+    
     font-size: 2em;
     float: right;
     color: white;
     clear: right;
-    margin-top: 15px;
 }
 
 .container .top:hover, .container .top:focus{
