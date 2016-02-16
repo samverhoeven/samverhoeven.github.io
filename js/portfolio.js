@@ -41,12 +41,12 @@ function windowLoad() {
 
     if ($("html").hasClass("no-touchevents")) { //checkt op touchevent class van Modernizr
 
-        new ScrollFlow();
+        new ScrollFlow(); //scrollflow laden
 
-        skillbarAnimate(1000, 500);
+        skillbarAnimate(1000, 500); //skillbars eerste keer animeren als pagina geladen wordt 
         $(window).on("scroll", function (e) {
             e.stopPropagation();
-            skillbarAnimate(1000, 500);
+            skillbarAnimate(1000, 500); //skillbars animeren
         });
 
     } else {
@@ -133,11 +133,10 @@ function linkDeflate(elem) {
     eSibling.style.marginTop = "-35px";
 }
 
-function skillbarAnimate(scrolldownTime, scrollupTime) {
+function skillbarAnimate(scrolldownTime, scrollupTime) { //skillbars animeren op basis van scrollpositie
     var windowTop = $(window).scrollTop();
-    var windowHalf = windowTop + ($(window).height() / 4) * 3;
+    var windowHalf = windowTop + ($(window).height() / 4) * 3; //op 3/4 van beeld
     var skillTop = $("#skills").offset().top;
-    animationDone = false;
     if (windowHalf >= skillTop) {
 
         $("#skillbar1").animate({width: "95%"}, scrolldownTime);
@@ -155,7 +154,7 @@ function skillbarAnimate(scrolldownTime, scrollupTime) {
     }
 }
 
-function skillsFontIcons() {
+function skillsFontIcons() { //inhoud van skills blok veranderen voor safari (windows versie ondersteund svg niet optimaal)
     if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
         var skillsinhoud = '<p class="heading2 scrollflow -slide-left -opacity">Skills</p>'
                 + '<div class="skill row">'
