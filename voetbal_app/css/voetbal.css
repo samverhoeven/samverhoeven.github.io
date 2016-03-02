@@ -1,0 +1,57 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #87CEEB;
+    overflow: hidden;
+}
+
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td{
+    padding: 5px;
+}
+
+th{
+    background-color:#f1f1f1;
+}
+
+tr:nth-child(2n+1){
+    background-color:#f1f1f1;
+}
+
+#inhoud{
+    width: 75%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background-color: #F0FFFF;
+}
+
+.container{
+    margin: 0 5%;
+}
+
+.error{
+    color: red;
+}
+
+.error-box{
+    display: inline-block
+}
+
+form input.ng-touched.ng-invalid{
+    background-color: pink;
+}
+
+form input.ng-touched.ng-valid{
+    background-color: lightgreen;
+}
+
+.logo img{
+    width: 20px;
+}

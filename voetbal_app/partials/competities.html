@@ -1,0 +1,8 @@
+<div class="container">
+<h2>Europese Competities</h2>
+<ul>
+    <li ng-repeat="x in leaguesData | filter: leagueFilter">
+        <a href="{{'#/competities/' + x.id}}" ng-bind="x.caption"></a>
+    </li>
+</ul>
+</div>

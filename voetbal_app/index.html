@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AngularJS Test</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/voetbal.css" rel="stylesheet"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+        <script src="js/ngSilent.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="inhoud" ng-app="myApp">
+            <header>
+                <div class="container">
+                    <h1><a href="../index.html#projecten">Terug</a></h1>
+                    <h1>Voetbal App</h1>
+                    <ul>
+                        <li><a href="#/competities">Competities</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div ng-view></div>
+        </div>
+
+        <script src="js/app.js"></script>
+        <script src="js/controllers.js"></script>
+    </body>
+</html>
