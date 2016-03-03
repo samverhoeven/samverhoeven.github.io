@@ -74,6 +74,7 @@ controllers.controller("tableCtrl", function ($scope, $http, $rootScope, $routeP
 controllers.controller("teamCtrl", function ($scope, $http, $routeParams, $rootScope) {
     var param = $routeParams.teamId;
     var urlTeam = "http://api.football-data.org/v1/teams/" + param + "";
+    var urlFixtures = "http://api.football-data.org/v1/teams/" + param + "/fixtures";
     var urlSpelers = "http://api.football-data.org/v1/teams/" + param + "/players";
 
     $scope.orderDir = true;
@@ -82,16 +83,37 @@ controllers.controller("teamCtrl", function ($scope, $http, $routeParams, $rootS
         method: "GET",
         url: urlTeam,
         headers: {"X-Auth-Token": $rootScope.footballAuth}
-    }).then(function (response) {
-        $scope.teamData = response.data;
+    }).success(function (response) {
+        $scope.teamData = response;
+    }).error(function (error) {
+        console.log("error teamData");
     });
+
+    $http({//wedstrijden laden
+        method: "GET",
+        url: urlFixtures,
+        header: {"X-Auth-Token": $rootScope.footballAuth}
+    }).success(function (response) {
+        for (i = 0; i < response.fixtures; i++) {
+
+        }
+
+        $scope.fixturesData = response;
+        console.log($scope.fixturesData);
+
+
+
+    }).error(function (error) {
+        console.log("error fixturesData");
+    });
+
 
     $http({//gegevens van spelers van bepaald team laden
         method: "GET",
         url: urlSpelers,
         headers: {"X-Auth-Token": $rootScope.footballAuth}
-    }).then(function (response) {
-        $scope.spelersData = response.data.players;
+    }).success(function (response) {
+        $scope.spelersData = response.players;
         for (i = 0; i < $scope.spelersData.length; i++) {
             //marketValue omvormen van string naar int
             if ($scope.spelersData[i].marketValue != null) {//checken of er een marktwaarde is gegeven
@@ -143,6 +165,8 @@ controllers.controller("teamCtrl", function ($scope, $http, $routeParams, $rootS
             }
             $scope.spelersData[i].position = position;
         }
+    }).error(function (error) {
+        console.log("error spelersData");
     });
 
     $scope.orderPlayersByMe = function (x) {//om spelers te ranschikking op bepaalde eigenschap
