@@ -89,7 +89,7 @@ controllers.controller("teamCtrl", function ($scope, $http, $routeParams, $rootS
         console.log("error teamData");
     });
 
-    $http({//wedstrijden laden
+    /*$http({//wedstrijden laden
         method: "GET",
         url: urlFixtures,
         header: {"X-Auth-Token": $rootScope.footballAuth}
@@ -105,7 +105,7 @@ controllers.controller("teamCtrl", function ($scope, $http, $routeParams, $rootS
 
     }).error(function (error) {
         console.log("error fixturesData");
-    });
+    });*/
 
 
     $http({//gegevens van spelers van bepaald team laden
@@ -117,7 +117,7 @@ controllers.controller("teamCtrl", function ($scope, $http, $routeParams, $rootS
         for (i = 0; i < $scope.spelersData.length; i++) {
             //marketValue omvormen van string naar int
             if ($scope.spelersData[i].marketValue != null) {//checken of er een marktwaarde is gegeven
-                $scope.spelersData[i].marketValue = $scope.spelersData[i].marketValue.replace(/(,|€|\s)/g, "");
+                $scope.spelersData[i].marketValue = $scope.spelersData[i].marketValue.replace(/(,|ï¿½|\s)/g, "");
                 $scope.spelersData[i].marketValue = parseInt($scope.spelersData[i].marketValue);
             } else {//als marktwaarde niet gegeven is, marketValue uit object verwijderen en marketValueNB in de plaats zetten
                 delete $scope.spelersData[i]['marketValue'];
