@@ -1,40 +1,72 @@
 <div class="container">
-<h2>Teaminfo</h2>
-<hr>
-<h3 ng-bind="teamData.name"></h3>
-<table>
-    <tr>
-        <td>Afkorting</td>
-        <td ng-bind="teamData.code"></td>
-    </tr>
-    <tr>
-        <td>Logo</td>
-        <td class="logo"><img src="{{teamData.crestUrl}}" alt="logo"></td>
-    </tr>
-    <tr>
-        <td>Team marktwaarde</td>
-        <td ng-bind="teamData.squadMarketValue"></td>
-    </tr>
-</table>
-<hr>
-<p>Zoeken in spelers: <input ng-model="filter" type="text"/></p>
-<h3>Spelers</h3>
-<table>
-    <tr>
-        <th ng-click="orderPlayersByMe('jerseyNumber')">Rugnummer</th>
-        <th ng-click="orderPlayersByMe('name')">Naam</th>
-        <th ng-click="orderPlayersByMe('position')">Positie</th>
-        <th ng-click="orderPlayersByMe('nationality')">Nationaliteit</th>
-        <th ng-click="orderPlayersByMe('dateOfBirth')">Geboren</th>
-        <th ng-click="orderPlayersByMe('marketValue')">Marktwaarde</th>
-    </tr>
-    <tr ng-repeat="x in spelersData | orderBy: orderPlayersBy : orderDir | filter: filter">
-        <td ng-bind="x.jerseyNumber"></td>
-        <td ng-bind="x.name"></td>
-        <td ng-bind="x.position"></td>
-        <td ng-bind="x.nationality"></td>
-        <td ng-bind="x.dateOfBirth"></td>
-        <td><span ng-bind="x.marketValue | currency: '&#8364'"></span><span ng-bind="x.marketValueNB"></span></td>
-    </tr>
-</table>
+    <h2>Teaminfo</h2>
+    <hr>
+    <h3 ng-bind="teamData.name"></h3>
+    <table>
+        <tr>
+            <td>Afkorting</td>
+            <td ng-bind="teamData.code"></td>
+        </tr>
+        <tr>
+            <td>Logo</td>
+            <td class="logo"><img src="{{teamData.crestUrl}}" alt="logo"></td>
+        </tr>
+        <tr>
+            <td>Team marktwaarde</td>
+            <td ng-bind="teamData.squadMarketValue"></td>
+        </tr>
+    </table>
+    <hr>
+    <ul>
+        <li><a href="" ng-click="toggleShowFixtures()">Matchen</a></li>
+        <li><a href="" ng-click="toggleShowPlayers()">Spelers</a></li>
+    </ul>
+    <div ng-show="fixturesVisible">
+        <h3>Vorige 5 matchen</h3>
+        <table>
+            <tr>
+                <th>Datum</th>
+                <th>Match</th>
+                <th>Uitslag</th>
+            </tr>
+            <tr ng-repeat="x in prev5Fixtures">
+                <td ng-bind="x.date | date"></td>
+                <td ng-bind="x.homeTeamName + ' - ' + x.awayTeamName"></td>
+                <td ng-bind="x.result.goalsHomeTeam + ' - ' + x.result.goalsAwayTeam"></td>
+            </tr>
+        </table>
+        <h3>Volgende 5 matchen</h3>
+        <table>
+            <tr>
+                <th>Datum</th>
+                <th>Match</th>
+            </tr>
+            <tr ng-repeat="x in next5Fixtures">
+                <td ng-bind="x.date | date"></td>
+                <td ng-bind="x.homeTeamName + ' - ' + x.awayTeamName"></td>
+            </tr>
+        </table>
+    </div>
+    <div ng-show="playersVisible">
+        <p>Zoeken in spelers: <input ng-model="filter" type="text"/></p>
+        <h3>Spelers</h3>
+        <table>
+            <tr>
+                <th ng-click="orderPlayersByMe('jerseyNumber')">Rugnummer</th>
+                <th ng-click="orderPlayersByMe('name')">Naam</th>
+                <th ng-click="orderPlayersByMe('position')">Positie</th>
+                <th ng-click="orderPlayersByMe('nationality')">Nationaliteit</th>
+                <th ng-click="orderPlayersByMe('dateOfBirth')">Geboren</th>
+                <th ng-click="orderPlayersByMe('marketValue')">Marktwaarde</th>
+            </tr>
+            <tr ng-repeat="x in spelersData| orderBy: orderPlayersBy : orderDir | filter: filter">
+                <td ng-bind="x.jerseyNumber"></td>
+                <td ng-bind="x.name"></td>
+                <td ng-bind="x.position"></td>
+                <td ng-bind="x.nationality"></td>
+                <td ng-bind="x.dateOfBirth"></td>
+                <td><span ng-bind="x.marketValue | currency: '&#8364 '"></span><span ng-bind="x.marketValueNB"></span></td>
+            </tr>
+        </table>
+    </div>
 </div>
