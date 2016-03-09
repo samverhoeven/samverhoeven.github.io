@@ -89,6 +89,7 @@ controllers.controller("teamCtrl", function ($scope, $http, $routeParams, $rootS
         headers: {"X-Auth-Token": $rootScope.footballAuth}
     }).success(function (response) {
         $scope.teamData = response;
+        console.log($scope.teamData);
     }).error(function (error) {
         console.log("error teamData");
     });
@@ -115,12 +116,12 @@ controllers.controller("teamCtrl", function ($scope, $http, $routeParams, $rootS
         for (i = 0; i < $scope.prev5Fixtures.length; i++) {//bepalen welke ploeg gewonnen heeft
             if ($scope.prev5Fixtures[i].result.goalsHomeTeam > $scope.prev5Fixtures[i].result.goalsAwayTeam) {
                 $scope.prev5Fixtures[i].winner = $scope.prev5Fixtures[i].homeTeamName;
-            } else if ($scope.prev5Fixtures[i].result.goalsHomeTeam < $scope.prev5Fixtures[i].result.goalsAwayTeam) {
+            }else if($scope.prev5Fixtures[i].result.goalsHomeTeam < $scope.prev5Fixtures[i].result.goalsAwayTeam){
                 $scope.prev5Fixtures[i].winner = $scope.prev5Fixtures[i].awayTeamName;
-            } else {
+            }else{
                 $scope.prev5Fixtures[i].winner = "DRAW";
             }
-
+            
             var awayTeamId = regex.exec($scope.prev5Fixtures[i]._links.awayTeam.href);
             var homeTeamId = regex.exec($scope.prev5Fixtures[i]._links.homeTeam.href);
             
@@ -155,7 +156,7 @@ controllers.controller("teamCtrl", function ($scope, $http, $routeParams, $rootS
         for (i = 0; i < $scope.spelersData.length; i++) {
             //marketValue omvormen van string naar int
             if ($scope.spelersData[i].marketValue != null) {//checken of er een marktwaarde is gegeven
-                $scope.spelersData[i].marketValue = $scope.spelersData[i].marketValue.replace(/(,|€|\s)/g, "");
+                $scope.spelersData[i].marketValue = $scope.spelersData[i].marketValue.replace(/(,|ï¿½|\s)/g, "");
                 $scope.spelersData[i].marketValue = parseInt($scope.spelersData[i].marketValue);
             } else {//als marktwaarde niet gegeven is, marketValue uit object verwijderen en marketValueNB in de plaats zetten
                 delete $scope.spelersData[i]['marketValue'];
