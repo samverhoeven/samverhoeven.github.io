@@ -13,6 +13,10 @@ body {
     background-color:#CCC;
 }
 
+a{
+    color: inherit;
+}
+
 /*******************LAYOUT*******************/
 
 #container{
@@ -48,16 +52,6 @@ body {
     padding: 0 1em ;
     min-height: 100%;
     display: none;
-}
-
-#voet{
-    position:absolute;
-    bottom:0;
-    width:800px;
-    background:#a5f6ca;
-    text-align:center;
-    color:#205c34;
-    padding:1em 0;
 }
 /*******************WINKELMANDJE*******************/
 

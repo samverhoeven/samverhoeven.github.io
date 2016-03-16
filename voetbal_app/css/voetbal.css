@@ -25,6 +25,10 @@ tr:nth-child(2n+1){
     background-color:#f1f1f1;
 }
 
+a{
+    color: inherit;
+}
+
 #inhoud{
     width: 75%;
     margin: 0 auto;
