@@ -144,10 +144,11 @@ function skillbarAnimate(scrolldownTime, scrollupTime) { //skillbars animeren op
         $("#skillbar3").animate({width: "90%"}, scrolldownTime);
         $("#skillbar4").animate({width: "90%"}, scrolldownTime);
         $("#skillbar5").animate({width: "80%"}, scrolldownTime);
-        $("#skillbar6").animate({width: "70%"}, scrolldownTime);
+        $("#skillbar6").animate({width: "75%"}, scrolldownTime);
         $("#skillbar7").animate({width: "70%"}, scrolldownTime);
-        $("#skillbar8").animate({width: "60%"}, scrolldownTime);
-        $("#skillbar9").animate({width: "50%"}, scrolldownTime);
+        $("#skillbar8").animate({width: "70%"}, scrolldownTime);
+        $("#skillbar9").animate({width: "60%"}, scrolldownTime);
+        $("#skillbar10").animate({width: "50%"}, scrolldownTime);
     } else {
         $(".skillbar").stop(true, false);
         $(".skillbar").css("width", "0%");
@@ -189,27 +190,33 @@ function skillsFontIcons() { //inhoud van skills blok veranderen voor safari (wi
                 + '</div>'
                 + '<div class="skill row">'
                 + '<div class="devicon-wrap col-xs-3 col-sm-2">'
-                + '<i class="devicon-mysql-plain-wordmark colored"></i>'
+                + '<i class="devicon-angularjs-plain colored"></i>'
                 + '</div>'
                 + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar6"></div></div>'
                 + '</div>'
                 + '<div class="skill row">'
                 + '<div class="devicon-wrap col-xs-3 col-sm-2">'
-                + '<i class="devicon-bootstrap-plain-wordmark colored"></i>'
+                + '<i class="devicon-mysql-plain-wordmark colored"></i>'
                 + '</div>'
                 + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar7"></div></div>'
                 + '</div>'
                 + '<div class="skill row">'
                 + '<div class="devicon-wrap col-xs-3 col-sm-2">'
-                + '<i class="devicon-github-plain-wordmark colored"></i>'
+                + '<i class="devicon-bootstrap-plain-wordmark colored"></i>'
                 + '</div>'
                 + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar8"></div></div>'
                 + '</div>'
                 + '<div class="skill row">'
                 + '<div class="devicon-wrap col-xs-3 col-sm-2">'
-                + '<i class="devicon-photoshop-plain colored"></i>'
+                + '<i class="devicon-github-plain-wordmark colored"></i>'
                 + '</div>'
                 + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar9"></div></div>'
+                + '</div>'
+                + '<div class="skill row">'
+                + '<div class="devicon-wrap col-xs-3 col-sm-2">'
+                + '<i class="devicon-photoshop-plain colored"></i>'
+                + '</div>'
+                + '<div class="skillbar-wrap col-xs-9 col-sm-10"><div class="skillbar" id="skillbar10"></div></div>'
                 + '</div>'
                 + '<a class="top" href="#">C</a>';
 
