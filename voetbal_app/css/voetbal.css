@@ -14,7 +14,7 @@ table{
 }
 
 th, td{
-    padding: 5px;
+    padding: 2%;
 }
 
 th{
@@ -58,4 +58,10 @@ form input.ng-touched.ng-valid{
 
 .logo img{
     width: 20px;
+}
+
+@media screen and (max-width: 600px){
+    #inhoud{
+        width: 100%;
+    }
 }
